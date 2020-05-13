@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="com.acme.retail.view::CV_DIM_PAYFAST" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_DIM_PAYFAST"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.acme.retail.data::customer.PAYFAST_MASTER">
+    <resourceUri>com.acme.retail.data::customer.PAYFAST_MASTER</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="com.acme.retail.data::customer.PAYFAST_MASTER">
+  <attributes>
+    <attribute id="PAYFAST_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYFAST_ID"/>
+      <keyMapping columnObjectName="customer.PAYFAST_MASTER" columnName="PAYFAST_ID"/>
+    </attribute>
+    <attribute id="NAME" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME"/>
+      <keyMapping columnObjectName="customer.PAYFAST_MASTER" columnName="NAME"/>
+    </attribute>
+    <attribute id="FIRST_NAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FIRST_NAME"/>
+      <keyMapping columnObjectName="customer.PAYFAST_MASTER" columnName="FIRST_NAME"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

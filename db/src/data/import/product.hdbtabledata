@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "imports":
+   [
+    {
+     "target_table" : "com.acme.retail.data::product.MASTER",
+     "column_mappings" : {
+        "PRODUCT_ID"			: "PRODUCT_ID",
+		"PRODUCT_DESCRIPTION"	: "PRODUCT_DESCRIPTION",
+		"PRODUCT_CATEGORY"		: "PRODUCT_CATEGORY",
+		"COLOR"					: "COLOR"
+     },
+     "source_data" : {
+       "data_type" : "CSV",
+       "file_name" : "com.acme.retail.data.import::product_master.csv",
+       "has_header" : true,
+       "no_data_import": false,
+       "delete_existing_foreign_data": true,
+       "dialect" : "HANA",
+       "type_config" : {
+          "delimiter" : ","
+        }
+      }
+    },
+    {
+     "target_table" : "com.acme.retail.data::product.SALES",
+     "column_mappings": {
+        "PRODUCT_ID"			: "PRODUCT_ID",
+		"SALES_TIME"			: "SALES_TIME",
+		"PRICE"					: "PRICE",
+		"AMOUNT"				: "AMOUNT",
+		"PAYFAST_ID"			: "PAYFAST_ID"
+     },
+     "source_data" : {
+       "data_type" : "CSV",
+       "file_name" : "com.acme.retail.data.import::product_sales.csv",
+       "has_header" : true,
+       "no_data_import": false,
+       "delete_existing_foreign_data": true,
+       "dialect" : "HANA",
+       "type_config" : {
+          "delimiter" : ","
+        }
+      }
+    }
+   ]
+}

@@ -1,0 +1,32 @@
+namespace com.acme.retail.data;
+
+@OData.publish : true
+context product {
+
+    /*@@layout{"layoutInfo":{}}*/
+    entity MASTER {
+        key PRODUCT_ID          : Integer not null;
+            PRODUCT_DESCRIPTION : String(200);
+            PRODUCT_CATEGORY    : String(120);
+            COLOR               : String(40);
+    };
+
+    /*@@layout{"layoutInfo":{}}*/
+    entity SALES {
+        PRODUCT_ID : Integer not null;
+        SALES_TIME : UTCTimestamp;
+        PRICE      : BinaryFloat;
+        AMOUNT     : Integer;
+        PAYFAST_ID : Integer;
+    };
+};
+
+context customer {
+
+    /*@@layout{"layoutInfo":{"x":-388,"y":-129.5}}*/
+    entity PAYFAST_MASTER {
+        key PAYFAST_ID : Integer not null;
+            NAME       : String(50);
+            FIRST_NAME : String(50);
+    };
+};

@@ -1,0 +1,12 @@
+{
+	"role": {
+		"name": "com.acme.retail.auth::Consumer",
+		"schema_privileges": [
+			{
+				"privileges": [
+					"SELECT", "EXECUTE"
+				]
+			}
+		]
+	}
+}

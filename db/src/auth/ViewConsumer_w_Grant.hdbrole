@@ -1,0 +1,22 @@
+{
+	"role": {
+		"name": "com.acme.retail.auth::ViewConsumer#",
+		"object_privileges": [
+			{
+				"name":"com.acme.retail.view::CV_DIM_MASTER",
+				"type":"VIEW",
+				"privileges_with_grant_option":[ "SELECT" ]
+			},
+			{
+				"name":"com.acme.retail.view::CV_DIM_PAYFAST",
+				"type":"VIEW",
+				"privileges_with_grant_option":[ "SELECT" ]
+			},
+			{
+				"name":"com.acme.retail.data::product.SALES",
+				"type":"TABLE",
+				"privileges": [ "SELECT" ]
+			}
+		]
+	}
+}

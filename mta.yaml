@@ -1,0 +1,22 @@
+ID: retail
+_schema-version: '2.1'
+description: Retail Demo HDI Container
+version: 0.0.1
+
+modules:
+ - name: retail-db
+   type: hdb
+   path: db
+   requires:
+    - name: retail-hdi
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+resources:
+ - name: retail-hdi
+   parameters:
+      config:
+         schema: RETAIL
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
